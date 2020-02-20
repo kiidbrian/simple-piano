@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import classNames from 'classnames/bind';
 
-const PianoKey = ({ note, isFlat, isHalfStep, octave, onStart, onStop }) => {
+const PianoKey = ({ note, isFlat, isHalfStep, octave, onStart, onStop, selectedNote }) => {
     let cx = classNames.bind();
     
     const retrieveNote = () => `${note}${octave}`;
@@ -14,8 +14,18 @@ const PianoKey = ({ note, isFlat, isHalfStep, octave, onStart, onStop }) => {
         })
     }
 
+    useEffect(() => {
+        if (selectedNote === note) {
+            onPlay();
+            setTimeout(() => {
+                onStop();
+            },500)
+        }
+    }, [selectedNote])
+
     return (
         <li
+            id={note + octave}
             onMouseDown={onPlay}
             onMouseUp={onStop}
             className={cx({
