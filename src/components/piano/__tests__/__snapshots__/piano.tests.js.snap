@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Brand/> renders the Brand 1`] = `undefined`;
+
+exports[`<Brand/> renders the Brand 2`] = `undefined`;
+
+exports[`<Pi/> renders the Brand 1`] = `undefined`;
+
+exports[`<PianoScale/> renders the  1`] = `undefined`;
+
+exports[`<PianoScale/> renders the PianoScale 1`] = `undefined`;
