@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 // Component imports
 import PianoBrand from './brand';
@@ -9,9 +9,9 @@ import PianoKeys from './keys';
 import './style.css';
 
 const Piano = () => {
-    const onStart = ({ note, octave }) => {
-        console.log(`Note ${note}${octave} was played!`);
-    };
+    const [playedNote, setPlayedNote] = useState('');
+
+    const onStart = ({ note, octave }) => setPlayedNote(`${note}${octave}`)
 
     const onStop = () => {};
 
@@ -22,6 +22,10 @@ const Piano = () => {
                 <PianoScale>
                     <PianoKeys onStart={onStart} onStop={onStop} />
                 </PianoScale>
+            </div>
+
+            <div className="piano__logger">
+                {playedNote}
             </div>
 
             <div className='piano__play__container'>
