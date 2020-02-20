@@ -13,22 +13,42 @@
 }
 
 .piano__logger {
-
 }
 
 .piano__play__container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 80px;
+    margin: 100px 500px;
+    padding: 0 80px;
 }
 
 .piano__play__btn {
-
+    background-color: #e7e7e7;
+    border: none;
+    color: black;
+    padding: 14px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
 }
 
-.piano__play_input {
+.piano__play__input {
+    width: 100%;
+    border: 1px solid #dacf97;
+    margin: 8px 0;
+    outline: none;
+    padding: 15px;
+    box-sizing: border-box;
+    transition: .3s;
+    font-size: 14px;
+}
 
+.piano__play__input:focus {
+    border-color: black;
+    box-shadow: 0 0 4px 0 black;
 }
 
 .piano__brand {
